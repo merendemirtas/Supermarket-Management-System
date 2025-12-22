@@ -1,8 +1,14 @@
 package com.supermarket.backend.product.service;
 
-import com.supermarket.backend.product.dto.product.*;
-import com.supermarket.backend.product.entity.*;
-import com.supermarket.backend.product.repository.*;
+import com.supermarket.backend.product.dto.product.ProductCreateRequestDto;
+import com.supermarket.backend.product.dto.product.ProductResponseDto;
+import com.supermarket.backend.product.dto.product.ProductUpdateRequestDto;
+import com.supermarket.backend.product.entity.Brand;
+import com.supermarket.backend.product.entity.Category;
+import com.supermarket.backend.product.entity.Product;
+import com.supermarket.backend.product.repository.BrandRepository;
+import com.supermarket.backend.product.repository.CategoryRepository;
+import com.supermarket.backend.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -51,9 +57,16 @@ public class ProductService {
                 .toList();
     }
 
+    /**
+     * FIX: Projede kritik stok mantığı "stockQuantity < criticalStockLevel" olmalı.
+     * Eski kod 0 ile kıyaslıyordu; bu da pratikte yanlış sonuç üretir.
+     */
     public List<ProductResponseDto> getCriticalStockProducts() {
-        return productRepository.findAllByStockQuantityLessThanAndIsActiveTrue(0)
+        return productRepository.findAllByIsActiveTrue()
                 .stream()
+                .filter(p -> p.getStockQuantity() != null
+                        && p.getCriticalStockLevel() != null
+                        && p.getStockQuantity() < p.getCriticalStockLevel())
                 .map(this::toResponse)
                 .toList();
     }

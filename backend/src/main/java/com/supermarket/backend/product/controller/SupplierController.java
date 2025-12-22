@@ -34,10 +34,7 @@ public class SupplierController {
 
     @PreAuthorize("hasAuthority('SUPPLIER_MANAGE')")
     @PutMapping("/{id}")
-    public SupplierResponseDto update(
-            @PathVariable Long id,
-            @Valid @RequestBody SupplierUpdateRequestDto dto
-    ) {
+    public SupplierResponseDto update(@PathVariable Long id, @Valid @RequestBody SupplierUpdateRequestDto dto) {
         return supplierService.update(id, dto);
     }
 

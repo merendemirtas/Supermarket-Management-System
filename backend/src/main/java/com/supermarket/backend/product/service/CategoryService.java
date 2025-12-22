@@ -1,8 +1,8 @@
 package com.supermarket.backend.product.service;
 
 import com.supermarket.backend.product.dto.category.CategoryCreateRequestDto;
-import com.supermarket.backend.product.dto.category.CategoryUpdateRequestDto;
 import com.supermarket.backend.product.dto.category.CategoryResponseDto;
+import com.supermarket.backend.product.dto.category.CategoryUpdateRequestDto;
 import com.supermarket.backend.product.entity.Category;
 import com.supermarket.backend.product.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;

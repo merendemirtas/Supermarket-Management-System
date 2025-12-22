@@ -1,6 +1,8 @@
 package com.supermarket.backend.product.controller;
 
-import com.supermarket.backend.product.dto.product.*;
+import com.supermarket.backend.product.dto.product.ProductCreateRequestDto;
+import com.supermarket.backend.product.dto.product.ProductResponseDto;
+import com.supermarket.backend.product.dto.product.ProductUpdateRequestDto;
 import com.supermarket.backend.product.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -20,9 +22,7 @@ public class ProductController {
     @PreAuthorize("hasAuthority('PRODUCT_MANAGE')")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ProductResponseDto create(
-            @Valid @RequestBody ProductCreateRequestDto dto
-    ) {
+    public ProductResponseDto create(@Valid @RequestBody ProductCreateRequestDto dto) {
         return productService.create(dto);
     }
 
@@ -40,10 +40,7 @@ public class ProductController {
 
     @PreAuthorize("hasAuthority('PRODUCT_MANAGE')")
     @PutMapping("/{id}")
-    public ProductResponseDto update(
-            @PathVariable Long id,
-            @Valid @RequestBody ProductUpdateRequestDto dto
-    ) {
+    public ProductResponseDto update(@PathVariable Long id, @Valid @RequestBody ProductUpdateRequestDto dto) {
         return productService.update(id, dto);
     }
 

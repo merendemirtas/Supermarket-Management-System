@@ -41,9 +41,9 @@ public class BrandService {
                 .orElseThrow(() -> new IllegalArgumentException("Brand not found"));
 
         brand.setBrandName(dto.getBrandName());
-        Brand saved = brandRepository.save(brand);
+        brandRepository.save(brand);
 
-        return toResponse(saved);
+        return toResponse(brand);
     }
 
     public void deactivate(Long id) {

@@ -23,10 +23,8 @@ public class SupplierService {
 
         Supplier supplier = new Supplier();
         supplier.setSupplierName(dto.getSupplierName());
-        supplier.setContactName(dto.getContactName());
         supplier.setPhone(dto.getPhone());
         supplier.setEmail(dto.getEmail());
-        supplier.setAddress(dto.getAddress());
         supplier.setIsActive(true);
 
         Supplier saved = supplierRepository.save(supplier);
@@ -45,10 +43,8 @@ public class SupplierService {
                 .orElseThrow(() -> new IllegalArgumentException("Supplier not found"));
 
         supplier.setSupplierName(dto.getSupplierName());
-        supplier.setContactName(dto.getContactName());
         supplier.setPhone(dto.getPhone());
         supplier.setEmail(dto.getEmail());
-        supplier.setAddress(dto.getAddress());
 
         Supplier saved = supplierRepository.save(supplier);
         return toResponse(saved);
@@ -66,10 +62,8 @@ public class SupplierService {
         return SupplierResponseDto.builder()
                 .supplierId(supplier.getSupplierId())
                 .supplierName(supplier.getSupplierName())
-                .contactName(supplier.getContactName())
                 .phone(supplier.getPhone())
                 .email(supplier.getEmail())
-                .address(supplier.getAddress())
                 .isActive(supplier.getIsActive())
                 .build();
     }

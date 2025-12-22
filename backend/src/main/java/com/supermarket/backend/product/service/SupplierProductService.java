@@ -23,9 +23,8 @@ public class SupplierProductService {
 
     public SupplierProductResponseDto create(SupplierProductCreateRequestDto dto) {
 
-        if (supplierProductRepository
-                .existsBySupplier_SupplierIdAndProduct_ProductId(
-                        dto.getSupplierId(), dto.getProductId())) {
+        if (supplierProductRepository.existsBySupplier_SupplierIdAndProduct_ProductId(
+                dto.getSupplierId(), dto.getProductId())) {
             throw new IllegalArgumentException("Supplier already linked to this product");
         }
 

@@ -5,6 +5,7 @@ import com.supermarket.backend.product.dto.supplierproduct.SupplierProductRespon
 import com.supermarket.backend.product.service.SupplierProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,17 +20,14 @@ public class SupplierProductController {
 
     @PreAuthorize("hasAuthority('SUPPLIER_PRODUCT_MANAGE')")
     @PostMapping
-    public SupplierProductResponseDto create(
-            @Valid @RequestBody SupplierProductCreateRequestDto dto
-    ) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public SupplierProductResponseDto create(@Valid @RequestBody SupplierProductCreateRequestDto dto) {
         return supplierProductService.create(dto);
     }
 
     @PreAuthorize("hasAuthority('SUPPLIER_PRODUCT_VIEW')")
-    @GetMapping("/product/{productId}")
-    public List<SupplierProductResponseDto> getByProduct(
-            @PathVariable Long productId
-    ) {
+    @GetMapping("/by-product/{productId}")
+    public List<SupplierProductResponseDto> getByProduct(@PathVariable Long productId) {
         return supplierProductService.getByProduct(productId);
     }
 }

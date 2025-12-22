@@ -1,8 +1,8 @@
 package com.supermarket.backend.product.controller;
 
 import com.supermarket.backend.product.dto.category.CategoryCreateRequestDto;
-import com.supermarket.backend.product.dto.category.CategoryUpdateRequestDto;
 import com.supermarket.backend.product.dto.category.CategoryResponseDto;
+import com.supermarket.backend.product.dto.category.CategoryUpdateRequestDto;
 import com.supermarket.backend.product.service.CategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -22,9 +22,7 @@ public class CategoryController {
     @PreAuthorize("hasAuthority('CATEGORY_MANAGE')")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CategoryResponseDto create(
-            @Valid @RequestBody CategoryCreateRequestDto dto
-    ) {
+    public CategoryResponseDto create(@Valid @RequestBody CategoryCreateRequestDto dto) {
         return categoryService.create(dto);
     }
 
@@ -36,10 +34,7 @@ public class CategoryController {
 
     @PreAuthorize("hasAuthority('CATEGORY_MANAGE')")
     @PutMapping("/{id}")
-    public CategoryResponseDto update(
-            @PathVariable Long id,
-            @Valid @RequestBody CategoryUpdateRequestDto dto
-    ) {
+    public CategoryResponseDto update(@PathVariable Long id, @Valid @RequestBody CategoryUpdateRequestDto dto) {
         return categoryService.update(id, dto);
     }
 
