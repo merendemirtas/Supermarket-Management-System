@@ -166,3 +166,12 @@ CREATE TABLE sale_item (
     CHECK (quantity > 0),
     CHECK (unit_price > 0)
 );
+
+
+
+/*role id e göre permission sıralama*/
+SELECT p.permission_code AS stock_manager_permission
+FROM permissions p
+JOIN role_permissions rp ON rp.permission_id=p.id
+JOIN roles r ON r.id=rp.role_id
+WHERE r.id=2
