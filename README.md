@@ -33,54 +33,67 @@ Sales Operations (Cashier module)
 Purchase / Stock Entry Operations (Warehouse module)
 
 User Management (Admin module)
+
 Inventory Monitoring (Critical stock alerts)
+
   📊 Dashboard & Analytics
+  
 Summary metrics (total sales, total suppliers, total products)
+
 Last 7 days sales trend (line chart)
+
 Top-selling products (bar chart)
+
 Real-time analytics powered by Chart.js
 
   🛠️ Tech Stack
   
   Backend
   
-Java 17+
-Spring Boot
-Spring Web (REST)
-Spring Security (JWT)
-Spring Data JPA (Hibernate)
-PostgreSQL
-Lombok
-ModelMapper/DTO Structure
-RBAC Authorization
-Layered Architecture (Controller → Service → Repository → Entity)
+Java 17+ , 
+Spring Boot , 
+Spring Web (REST) , 
+Spring Security (JWT) , 
+Spring Data JPA (Hibernate) , 
+PostgreSQL , 
+Lombok , 
+ModelMapper/DTO Structure , 
+RBAC Authorization , 
+Layered Architecture (Controller → Service → Repository → Entity) 
 
   Frontend
   
-React (18+)
-TypeScript
-Vite
-Axios
-React Router DOM
-Chart.js
-Custom Components (ProtectedRoute, Sidebar, Layout)
+React (18+) , 
+TypeScript , 
+Vite , 
+Axios , 
+React Router DOM , 
+Chart.js , 
+Custom Components (ProtectedRoute, Sidebar, Layout) 
 
   🧱 Domain Architecture
   
 ✔ AUTH
 Login, session validation, JWT generation.
+
 ✔ USER
 Create users, list users, assign roles.
+
 ✔ PRODUCT
 Product info, critical stock, brand/category links.
+
 ✔ CATEGORY & BRAND
 CRUD operations for organizing catalog.
+
 ✔ SUPPLIER
 Supplier management + Supplier-Product mapping.
+
 ✔ STOCK / PURCHASE
 Stock entry operations for warehouse management.
+
 ✔ SALES
 Sales module for cashiers.
+
 ✔ DASHBOARD
 Analytics for managers.
 
@@ -131,19 +144,17 @@ BRAND_VIEW
 SALE_CREATE
 SALE_VIEW
 
-  📡 API Endpoints (Complete)
-Below is the full list extracted from your backend:
+  📡 API Endpoints 
+  
   🔐 AUTH
-Method	Endpoint	Description
-POST	/api/auth/login	Login (JWT generation)
-POST	/api/auth/register	Register user
-GET	/api/auth/me	Get current user
+  
+POST	/api/auth/login	Login (JWT generation) 
+POST	/api/auth/register	Register user 
+GET	/api/auth/me	Get current user 
   👤 USER
-Method	Endpoint	Description
 POST	/api/users	Create user
 GET	/api/users	List users
   📁 CATEGORY
-Method	Endpoint
 POST	/api/categories
 GET	/api/categories
 PUT	/api/categories/{id}
