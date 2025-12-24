@@ -151,30 +151,36 @@ SALE_VIEW
 POST	/api/auth/login	Login (JWT generation) 
 POST	/api/auth/register	Register user 
 GET	/api/auth/me	Get current user 
+
   👤 USER
 POST	/api/users	Create user
 GET	/api/users	List users
+
   📁 CATEGORY
 POST	/api/categories
 GET	/api/categories
 PUT	/api/categories/{id}
 DELETE	/api/categories/{id}
+
   🏷️ BRAND
 Method	Endpoint
 POST	/api/brands
 GET	/api/brands
 PUT	/api/brands/{id}
 DELETE	/api/brands/{id}
+  
   🚚 SUPPLIER
 Method	Endpoint
 POST	/api/suppliers
 GET	/api/suppliers
 PUT	/api/suppliers/{id}
 DELETE	/api/suppliers/{id}
+  
   🔗 SUPPLIER–PRODUCT
 Method	Endpoint
 POST	/api/supplier-products
 GET	/api/supplier-products/by-product/{productId}
+  
   🛒 PRODUCT
 Method	Endpoint
 POST	/api/products
@@ -183,16 +189,19 @@ GET	/api/products/critical-stock
 GET	/api/products/{id}
 PUT	/api/products/{id}
 DELETE	/api/products/{id}
+  
   💰 SALE
 Method	Endpoint
 POST	/api/sales
 GET	/api/sales
 GET	/api/sales/{id}
+  
   📥 PURCHASE (STOCK)
 Method	Endpoint
 POST	/api/purchases
 GET	/api/purchases
 GET	/api/purchases/{id}
+  
   📊 DASHBOARD
 Method	Endpoint
 GET	/api/dashboard/summary
@@ -216,6 +225,7 @@ http://localhost:5173
   🌍 Environment Variables (Frontend)
 Create a .env file:
 VITE_API_URL=http://localhost:8080
+
   🗄️ Database Setup
 Run SQL scripts (roles, permissions, role-permissions):
 INSERT INTO roles (...);
@@ -224,10 +234,15 @@ INSERT INTO role_permissions (...);
 (You already generated and inserted them.)
 
 🖥️ Screenshots 
+
+Product 
 <img width="1680" height="954" alt="Ekran Resmi 2025-12-23 18 32 26" src="https://github.com/user-attachments/assets/d8080611-8f63-42d6-8dd9-f8280101b2bc" />
 
-## Screenshots
+Dashboard
 <img width="1566" height="585" alt="Ekran Resmi 2025-12-23 12 09 16" src="https://github.com/user-attachments/assets/282bc206-e52f-4cb2-9c41-78e62eb62461" />
+
+Database
+<img width="1150" height="951" alt="db" src="https://github.com/user-attachments/assets/127e9f26-ff7e-4a9a-bd57-5bc1d4493258" />
 
 
 📄 License
