@@ -239,7 +239,8 @@ Product
 <img width="1680" height="954" alt="Ekran Resmi 2025-12-23 18 32 26" src="https://github.com/user-attachments/assets/d8080611-8f63-42d6-8dd9-f8280101b2bc" />
 
 Dashboard
-<img width="1566" height="585" alt="Ekran Resmi 2025-12-23 12 09 16" src="https://github.com/user-attachments/assets/282bc206-e52f-4cb2-9c41-78e62eb62461" />
+<img width="1696" height="636" alt="Ekran Resmi 2025-12-24 10 37 18" src="https://github.com/user-attachments/assets/cdc9ac6f-9cfb-41af-9b55-4d90e0bb60fe" />
+
 
 Database
 <img width="1150" height="951" alt="db" src="https://github.com/user-attachments/assets/127e9f26-ff7e-4a9a-bd57-5bc1d4493258" />
