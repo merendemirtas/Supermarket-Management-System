@@ -8,19 +8,30 @@ It provides complete modules for inventory, procurement, supplier relations, use
   🔐 Authentication & Security
   
 JWT Authentication (/api/auth/login)
+
 Stateless Spring Security
+
 Role-Based Access Control (RBAC)
+
 Permission-level method security (hasAuthority)
+
 Protected frontend routes
+
 Token-based session handling with Axios interceptors
+
 
   🛒 Functional Modules
   
 Product Management
+
 Category & Brand Management
+
 Supplier & Supplier-Product Relation Management
+
 Sales Operations (Cashier module)
+
 Purchase / Stock Entry Operations (Warehouse module)
+
 User Management (Admin module)
 Inventory Monitoring (Critical stock alerts)
   📊 Dashboard & Analytics
