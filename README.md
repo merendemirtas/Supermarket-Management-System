@@ -1,16 +1,21 @@
   📘 Supermarket Management System
+  
 A full-stack supermarket management platform built with Spring Boot, React + TypeScript, PostgreSQL, JWT Authentication, and Role-Based Access Control (RBAC).
 It provides complete modules for inventory, procurement, supplier relations, user management, sales operations, and analytics dashboards.
 
   🚀 Features
+  
   🔐 Authentication & Security
+  
 JWT Authentication (/api/auth/login)
 Stateless Spring Security
 Role-Based Access Control (RBAC)
 Permission-level method security (hasAuthority)
 Protected frontend routes
 Token-based session handling with Axios interceptors
+
   🛒 Functional Modules
+  
 Product Management
 Category & Brand Management
 Supplier & Supplier-Product Relation Management
@@ -25,7 +30,9 @@ Top-selling products (bar chart)
 Real-time analytics powered by Chart.js
 
   🛠️ Tech Stack
+  
   Backend
+  
 Java 17+
 Spring Boot
 Spring Web (REST)
@@ -38,6 +45,7 @@ RBAC Authorization
 Layered Architecture (Controller → Service → Repository → Entity)
 
   Frontend
+  
 React (18+)
 TypeScript
 Vite
@@ -47,6 +55,7 @@ Chart.js
 Custom Components (ProtectedRoute, Sidebar, Layout)
 
   🧱 Domain Architecture
+  
 ✔ AUTH
 Login, session validation, JWT generation.
 ✔ USER
@@ -65,8 +74,9 @@ Sales module for cashiers.
 Analytics for managers.
 
   👤 Role-Based Access Control (RBAC)
+
 Roles
-Role Code	UI Name
+
 ADMIN	Store Manager
 STOCK_MANAGER	Warehouse / Procurement Manager
 CASHIER	Cashier
